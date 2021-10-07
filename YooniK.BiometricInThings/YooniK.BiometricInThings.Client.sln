@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YooniK.BiometricInThings.Client", "YooniK.BiometricInThings.Client\YooniK.BiometricInThings.Client.csproj", "{929512E1-6C40-44BE-9A74-93A650DAD3B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YooniK.BiometricInThings.Client.Sample", "YooniK.BiometricInThings.Client.Sample\YooniK.BiometricInThings.Client.Sample.csproj", "{A8716821-D940-4584-9CFD-948C309D3363}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YooniK.BiometricInThings.Client.Tests", "YooniK.BiometricInThings.Client.Tests\YooniK.BiometricInThings.Client.Tests.csproj", "{803B218C-EAFE-41E9-B0E3-E89FD7A78E7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{929512E1-6C40-44BE-9A74-93A650DAD3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929512E1-6C40-44BE-9A74-93A650DAD3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929512E1-6C40-44BE-9A74-93A650DAD3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929512E1-6C40-44BE-9A74-93A650DAD3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8716821-D940-4584-9CFD-948C309D3363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8716821-D940-4584-9CFD-948C309D3363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8716821-D940-4584-9CFD-948C309D3363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8716821-D940-4584-9CFD-948C309D3363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{803B218C-EAFE-41E9-B0E3-E89FD7A78E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803B218C-EAFE-41E9-B0E3-E89FD7A78E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803B218C-EAFE-41E9-B0E3-E89FD7A78E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803B218C-EAFE-41E9-B0E3-E89FD7A78E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {590F54E6-715E-4CFD-9E04-9D125D91E7EA}
+	EndGlobalSection
+EndGlobal
