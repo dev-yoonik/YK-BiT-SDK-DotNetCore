@@ -28,7 +28,13 @@ For more information feel free to take a look at [YooniK.Services.Client](https:
 
 Use it:
 
+Make sure you have added the environment key-values (YK_BIT_BASE_URL and YK_BIT_X_API_KEY). Machine restart could be required.
+
 ```csharp
+
+// To read the values from the environment variables
+string baseUrl = Environment.GetEnvironmentVariable("YK_BIT_BASE_URL");
+string subscriptionKey = Environment.GetEnvironmentVariable("YK_BIT_X_API_KEY");
 
 var bitInformation = new ConnectionInformation(baseUrl, subscriptionKey);
 var bitClient = new BiometricInThingsClient(bitInformation);
