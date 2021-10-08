@@ -12,9 +12,9 @@ namespace YooniK.BiometricInThings.Client.Tests
     {
         private BiometricInThingsClient bitClient;
 
-        private string baseUrl = Valid.BaseUrl;
-        private string subscritionKey = Valid.SubscriptionKey;
-        
+        private string baseUrl = Environment.GetEnvironmentVariable("YK_BIT_BASE_URL");
+        private string subscritionKey = Environment.GetEnvironmentVariable("YK_BIT_X_API_KEY");
+
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
@@ -53,7 +53,6 @@ namespace YooniK.BiometricInThings.Client.Tests
         {
             var httpException = Assert.ThrowsAsync<HttpRequestException>(async () => await bitClient.VerifyAsync(Invalid.Base64Image));
             Assert.AreEqual(httpException.StatusCode, HttpStatusCode.BadRequest);
-
         }
 
         [Test]
