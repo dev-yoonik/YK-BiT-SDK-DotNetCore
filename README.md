@@ -41,7 +41,7 @@ var bitClient = new BiometricInThingsClient(bitInformation);
 
 // Validates the availability of the camera
 
-if(await bitClient.StatusAsync() == StatusEnum.Available){
+if(await bitClient.StatusAsync() == BiTStatus.Available){
 	// Captures a live face frame from the camera
 	var captured = await bitClient.CaptureAsync(captureTimeOutInSeconds: 5);
 	Console.WriteLine(captured);
