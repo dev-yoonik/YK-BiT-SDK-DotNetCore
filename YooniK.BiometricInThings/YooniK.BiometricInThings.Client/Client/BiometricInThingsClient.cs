@@ -54,7 +54,7 @@ namespace YooniK.BiometricInThings.Client
                     return StatusEnum.NotAvailable;
                 throw;
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 throw;
             }
