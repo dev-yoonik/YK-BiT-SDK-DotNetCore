@@ -2,7 +2,7 @@
 
 # YK-BiT-DotNetCore-SDK
 
-[![License](https://img.shields.io/pypi/l/yk_face.svg)](https://github.com/dev-yoonik/YK-Face-DotNetCore-SDK/blob/master/LICENSE)
+[![License](https://img.shields.io/pypi/l/yk_face.svg)](https://github.com/dev-yoonik/YK-BiT-SDK-DotNetCore/blob/master/LICENSE)
 
 This repository implements an integration SDK to facilitate the consumption of the YooniK.BiometricInThings API, a [YooniK Services](https://yoonik.me) offering.
 
