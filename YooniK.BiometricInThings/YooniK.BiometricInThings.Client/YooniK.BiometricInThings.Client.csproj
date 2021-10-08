@@ -33,7 +33,7 @@ With all of its endpoints covered and abstracted to provide an smooth experience
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="YooniK.Services.Client" Version="1.0.0" />
+    <PackageReference Include="YooniK.Services.Client" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>

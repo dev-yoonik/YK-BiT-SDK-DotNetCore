@@ -43,11 +43,11 @@ var bitClient = new BiometricInThingsClient(bitInformation);
 await bitClient.StatusAsync();
 
 // Captures a live face frame from the camera
-var captured = await bitClient.CaptureAsync(captureTimeOut: 5);
+var captured = await bitClient.CaptureAsync(captureTimeOutInSeconds: 5);
 Console.WriteLine(captured);
 
 // Compares the live face frame capture from the camera with an Image
-var verified = await bitClient.VerifyAsync(captured.Image, captureTimeOut: 5, matchingScoreThreshold: 0.3);
+var verified = await bitClient.VerifyAsync(captured.Image, captureTimeOutInSeconds: 5, matchingScoreThreshold: 0.3);
 Console.WriteLine(verified);
 
 // Compares two face images

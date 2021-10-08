@@ -16,6 +16,12 @@ namespace YooniK.BiometricInThings.Client
         public const string VerifyImages = "bit/verify_images";
     }
 
+    public enum StatusEnum
+    {
+        NotAvailable = 0,
+        Available = 1
+    }
+
     public class BiometricInThingsClient
     {
         private IServiceClient _serviceClient;
@@ -30,7 +36,7 @@ namespace YooniK.BiometricInThings.Client
         ///      Checks for the camera status.
         /// </summary>
         /// <returns><see cref="Task"/></returns>
-        public async Task StatusAsync()
+        public async Task<StatusEnum> StatusAsync()
         {
             try
             {
@@ -40,8 +46,15 @@ namespace YooniK.BiometricInThings.Client
                 );
 
                 await _serviceClient.SendRequestAsync(message);
+                return StatusEnum.Available;
             }
-            catch (Exception)
+            catch (HttpRequestException httpRequestException)
+            {
+                if (httpRequestException.StatusCode == System.Net.HttpStatusCode.ServiceUnavailable)
+                    return StatusEnum.NotAvailable;
+                throw;
+            }
+            catch (Exception exception)
             {
                 throw;
             }
