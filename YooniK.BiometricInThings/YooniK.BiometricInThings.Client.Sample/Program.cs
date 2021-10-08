@@ -20,7 +20,7 @@ namespace YooniK.BiometricInThings.Sample
                 
                 // Validates the availability of the camera
                 var status = await bitClient.StatusAsync();
-                if (status == StatusEnum.Available)
+                if (status == BiTStatus.Available)
                 {
 
                     // Captures a live face frame from the camera
