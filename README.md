@@ -29,19 +29,19 @@ For more information feel free to take a look at [YooniK.Services.Client](https:
 
 Use it:
 
-Make sure you have added the environment key-values (YK_BIT_BASE_URL and YK_BIT_X_API_KEY). Machine restart could be required.
+You can also use environment variables (YK_BIT_BASE_URL and YK_BIT_X_API_KEY) to identify the access data. Machine restart could be required.
 
 ```csharp
 
-// To read the values from the environment variables
-string baseUrl = Environment.GetEnvironmentVariable("YK_BIT_BASE_URL");
-string subscriptionKey = Environment.GetEnvironmentVariable("YK_BIT_X_API_KEY");
-
+// Edit your access credentials
+string baseUrl = "YOUR-API-ENDPOINT";
+string subscriptionKey = "YOUR-X-API-KEY-ENDPOINT";
 var bitInformation = new ConnectionInformation(baseUrl, subscriptionKey);
+
+// If you have the environment variables set, remove the above and use "var bitClient = new BiometricInThingsClient()"
 var bitClient = new BiometricInThingsClient(bitInformation);
 
 // Validates the availability of the camera
-
 if(await bitClient.StatusAsync() == BiTStatus.Available){
 	// Captures a live face frame from the camera
 	var captured = await bitClient.CaptureAsync(captureTimeOutInSeconds: 5);
@@ -55,7 +55,6 @@ if(await bitClient.StatusAsync() == BiTStatus.Available){
 	var verifiedImages = await bitClient.VerifyImagesAsync(captured.Image, verified.VerifiedImage, matchingScoreThreshold: 0.8);
 	Console.WriteLine(verifiedImages);
 }
-
 
 ```
 

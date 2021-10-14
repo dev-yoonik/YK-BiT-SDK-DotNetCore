@@ -24,7 +24,22 @@ namespace YooniK.BiometricInThings.Client
 
     public class BiometricInThingsClient
     {
+        private readonly string ENVIRONMENT_VARIABLE_BASE_URL = "YK_BIT_BASE_URL";
+        private readonly string ENVIRONMENT_VARIABLE_X_API_KEY = "YK_BIT_X_API_KEY";
+
         private IServiceClient _serviceClient;
+
+        public BiometricInThingsClient()
+        {
+            string baseUrl = Environment.GetEnvironmentVariable(ENVIRONMENT_VARIABLE_BASE_URL);
+            string x_api_key = Environment.GetEnvironmentVariable(ENVIRONMENT_VARIABLE_X_API_KEY);
+            if (baseUrl == null)
+                throw new ArgumentException($"Environment Variable '{ENVIRONMENT_VARIABLE_BASE_URL}' not found. ");
+            if (x_api_key == null)
+                throw new ArgumentException($"Environment Variable '{ENVIRONMENT_VARIABLE_X_API_KEY}' not found. ");
+            _serviceClient = new ServiceClient(new ConnectionInformation(baseUrl, x_api_key));
+        }
+
 
         public BiometricInThingsClient(IConnectionInformation connectionInformation)
         {
