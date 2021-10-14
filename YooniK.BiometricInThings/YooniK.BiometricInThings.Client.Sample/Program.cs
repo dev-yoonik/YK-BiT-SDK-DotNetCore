@@ -10,8 +10,8 @@ namespace YooniK.BiometricInThings.Sample
     {
         static async Task<int> Main(string[] args)
         {
-            string baseUrl = Environment.GetEnvironmentVariable("YK_BIT_BASE_URL");
-            string subscriptionKey = Environment.GetEnvironmentVariable("YK_BIT_X_API_KEY");
+            string baseUrl = "YOUR-API-ENDPOINT";
+            string subscriptionKey = "YOUR-X-API-KEY";
 
             try
             {
