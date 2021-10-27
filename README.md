@@ -7,8 +7,6 @@
 
 This repository implements an integration SDK to facilitate the consumption of the YooniK.BiometricInThings API, a [YooniK Services](https://yoonik.me) offering.
 
-For more information please [contact us](mailto:tech@yoonik.me).
-
 ## Getting started
 
 To import the latest this solution into your project, enter the following command in the NuGet Package Manager Console in Visual Studio:
@@ -18,8 +16,6 @@ For other installation methods, see [YooniK.BiometricInThings.Client Nuget](http
 ```
 PM> Install-Package YooniK.BiometricInThings.Client
 ```
-
-
 
 ## Example
 
@@ -58,5 +54,9 @@ if(await bitClient.StatusAsync() == BiTStatus.Available){
 
 ```
 
+ If you're interested in using YooniK.BiometricInThings API for identification purposes, please contact us.
 
- If you're interested in using YooniK.BiometricInThings API for identification purposes, please contact us: tech@yoonik.me.
+## Contact & Support
+
+For more information and trial licenses please [contact us](mailto:tech@yoonik.me) or join us at our [discord community](https://discord.gg/SqHVQUFNtN).
+
