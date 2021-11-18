@@ -56,6 +56,10 @@ if(await bitClient.StatusAsync() == BiTStatus.Available){
 
  If you're interested in using YooniK.BiometricInThings API for identification purposes, please contact us.
 
+## YooniK BiT API Details
+
+For a complete specification of our BiT API please check the [swagger file](https://dev-yoonik.github.io/YK-BiT-Documentation/).
+
 ## Contact & Support
 
 For more information and trial licenses please [contact us](mailto:tech@yoonik.me) or join us at our [discord community](https://discord.gg/SqHVQUFNtN).
