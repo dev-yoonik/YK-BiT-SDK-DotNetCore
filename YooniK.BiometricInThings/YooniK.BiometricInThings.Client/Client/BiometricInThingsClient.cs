@@ -10,6 +10,7 @@ namespace YooniK.BiometricInThings.Client
 {
     public static class BiometricInThingsEndpoints
     {
+        public const string Setup = "bit/setup";
         public const string Capture = "bit/capture";
         public const string Status = "bit/status";
         public const string Verify = "bit/verify";
@@ -188,6 +189,37 @@ namespace YooniK.BiometricInThings.Client
                 );
 
                 return await _serviceClient.SendRequestAsync<VerifyImagesResponse>(message);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        ///   Perform BiT setup actions. 
+        /// </summary>
+        /// <returns>
+        ///     True if setup was successful.
+        ///     False if unsuccessful.
+        /// </returns>
+        public async Task<bool> SetupAsync()
+        {
+            try
+            {
+                var message = new RequestMessage(
+                 httpMethod: HttpMethod.Get,
+                 urlRelativePath: BiometricInThingsEndpoints.Setup
+             );
+
+                await _serviceClient.SendRequestAsync(message);
+                return true;
+            }
+            catch (HttpRequestException httpRequestException)
+            {
+                if (httpRequestException.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+                    return false;
+                throw;
             }
             catch (Exception)
             {

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [unreleased]
 
 ### Added
+- Setup endpoint coverage	
 - BiometricInThings empty constructor which reads from the environment variables
 
 ### Changed
