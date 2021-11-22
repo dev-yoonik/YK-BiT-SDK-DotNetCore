@@ -31,10 +31,7 @@ namespace YooniK.BiometricInThings.Sample
 
                 // Setup
                 {
-                    if (await bitClient.SetupAsync())
-                        Console.WriteLine("Setup was successful.");
-                    else
-                        Console.WriteLine("Setup was unsuccessful.\nTry again later.");
+                    Console.WriteLine($"BiT setup successful: {await bitClient.SetupAsync()}");
                     return 0;
                 }
                 
