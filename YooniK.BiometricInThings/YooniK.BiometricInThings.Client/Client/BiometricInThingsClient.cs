@@ -199,11 +199,7 @@ namespace YooniK.BiometricInThings.Client
         /// <summary>
         ///   Perform BiT setup actions. 
         /// </summary>
-        /// <returns>
-        ///     True if setup was successful.
-        ///     False if unsuccessful.
-        /// </returns>
-        public async Task<bool> SetupAsync()
+        public async Task SetupAsync()
         {
             try
             {
@@ -212,12 +208,9 @@ namespace YooniK.BiometricInThings.Client
                  urlRelativePath: BiometricInThingsEndpoints.Setup);
 
                 await _serviceClient.SendRequestAsync(message);
-                return true;
             }
-            catch (HttpRequestException httpRequestException)
+            catch (Exception)
             {
-                if (httpRequestException.StatusCode == System.Net.HttpStatusCode.InternalServerError)
-                    return false;
                 throw;
             }
         }

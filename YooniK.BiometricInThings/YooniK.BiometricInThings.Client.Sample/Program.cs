@@ -17,7 +17,7 @@ namespace YooniK.BiometricInThings.Sample
 {
     class Program
     {
-        static async Task<int> Main(string[] args)
+        static async Task Main(string[] args)
         {
             string baseUrl = "YOUR-API-ENDPOINT";
             string subscriptionKey = "YOUR-X-API-KEY";
@@ -29,10 +29,23 @@ namespace YooniK.BiometricInThings.Sample
 
                 // Setup
                 {
-                    Console.WriteLine($"BiT setup successful: {await bitClient.SetupAsync()}");
-                    return 0;
+                    bool setup_successful = true;
+                    try
+                    {
+                        await bitClient.SetupAsync();
+                    }
+                    catch (Exception ex)
+                    {
+                        setup_successful = false;
+                        Console.WriteLine(ex.Message + "\n" + ex.StackTrace);
+                    }
+                    finally
+                    {
+                        Console.WriteLine($"BiT setup successful: {setup_successful}");
+                    }
+                    return;
                 }
-                
+
                 // Validates the availability of the camera
                 var status = await bitClient.StatusAsync();
                 if (status == BiTStatus.Available)
@@ -76,8 +89,6 @@ namespace YooniK.BiometricInThings.Sample
 
                 throw;
             }
-            
-            return 1;
         }
     }
 }
