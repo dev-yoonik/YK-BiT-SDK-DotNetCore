@@ -10,9 +10,7 @@ using YooniK.Services.Client.Common;
  *  - Run the BiT App
  *  - Run this SDK App
  *  - If the setup was successful:
- *      - Restart the BiT App
  *      - Comment the "setup" block
- *  - Otherwise re-do the steps from the beginning
 */
 
 namespace YooniK.BiometricInThings.Sample

@@ -209,8 +209,7 @@ namespace YooniK.BiometricInThings.Client
             {
                 var message = new RequestMessage(
                  httpMethod: HttpMethod.Get,
-                 urlRelativePath: BiometricInThingsEndpoints.Setup
-             );
+                 urlRelativePath: BiometricInThingsEndpoints.Setup);
 
                 await _serviceClient.SendRequestAsync(message);
                 return true;
@@ -219,10 +218,6 @@ namespace YooniK.BiometricInThings.Client
             {
                 if (httpRequestException.StatusCode == System.Net.HttpStatusCode.InternalServerError)
                     return false;
-                throw;
-            }
-            catch (Exception)
-            {
                 throw;
             }
         }
