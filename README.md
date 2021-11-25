@@ -1,11 +1,11 @@
-![https://yoonik.me/wp-content/uploads/2019/08/cropped-LogoV4_TRANSPARENT.png](https://yoonik.me/wp-content/uploads/2019/08/cropped-LogoV4_TRANSPARENT.png)
+![https://yk-website-images.s3.eu-west-1.amazonaws.com/LogoV4_TRANSPARENT.png](https://yk-website-images.s3.eu-west-1.amazonaws.com/LogoV4_TRANSPARENT.png)
 
 # YK-BiT-DotNetCore-SDK
 
 [![License](https://img.shields.io/github/license/dev-yoonik/YK-BiT-SDK-DotNetCore)](https://github.com/dev-yoonik/YK-BiT-SDK-DotNetCore/blob/master/LICENSE)
 [![Version](https://img.shields.io/nuget/v/YooniK.BiometricInThings.Client)](https://www.nuget.org/packages/YooniK.BiometricInThings.Client/)
 
-This repository implements an integration SDK to facilitate the consumption of the YooniK.BiometricInThings API, a [YooniK Services](https://yoonik.me) offering.
+This repository implements an integration SDK to facilitate the consumption of the YooniK.BiometricInThings API, a [YooniK Services](https://www.yoonik.me) offering.
 
 ## Getting started
 
