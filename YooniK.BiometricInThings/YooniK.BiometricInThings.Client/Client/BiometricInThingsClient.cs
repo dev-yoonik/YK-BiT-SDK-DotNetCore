@@ -204,9 +204,8 @@ namespace YooniK.BiometricInThings.Client
             try
             {
                 var message = new RequestMessage(
-                 httpMethod: HttpMethod.Get,
-                 urlRelativePath: BiometricInThingsEndpoints.Setup);
-
+                    httpMethod: HttpMethod.Get, 
+                    urlRelativePath: BiometricInThingsEndpoints.Setup);
                 await _serviceClient.SendRequestAsync(message);
             }
             catch (Exception)
